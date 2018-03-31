@@ -5,9 +5,12 @@ import re
 from collections import Counter
 
 
-with open(sys.argv[1]) as fh:
-    text = fh.read()
-words = re.findall('\w+', text)
-counter = Counter(words)
-for word, n in counter.most_common(10):
-    print(word, ':', n, 'times')
+def countwords(filename):
+    with open(filename) as fh:
+        text = fh.read()
+    words = re.findall('\w+', text)
+    counter = Counter(words)
+    for word, n in counter.most_common(10):
+        print(word, ':', n, 'times')
+
+countwords(sys.argv[1])
