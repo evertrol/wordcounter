@@ -9,4 +9,5 @@ setup(
     author="Evert Rol",
     author_email="evert.rol@example.com",
     packages=find_packages(),
+    entry_points={'console_scripts': 'wordcounter=wordcounter.__main__:main'},
 )
