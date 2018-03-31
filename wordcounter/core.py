@@ -6,6 +6,9 @@ from collections import Counter
 import argparse
 
 
+__all__ = ['countwords']
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Count length of filenames")
     parser.add_argument('filename', help="Input files")
