@@ -13,6 +13,11 @@ def countwords(filename):
     return counter.most_common(10)
 
 
-most_common = countwords(sys.argv[1])
-for word, n in most_common:
-    print(word, ':', n, 'times')
+def main():
+    most_common = countwords(sys.argv[1])
+    for word, n in most_common:
+        print(word, ':', n, 'times')
+
+
+if __name__ == "__main__":
+    main()
