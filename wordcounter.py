@@ -10,7 +10,9 @@ def countwords(filename):
         text = fh.read()
     words = re.findall('\w+', text)
     counter = Counter(words)
-    for word, n in counter.most_common(10):
-        print(word, ':', n, 'times')
+    return counter.most_common(10)
 
-countwords(sys.argv[1])
+
+most_common = countwords(sys.argv[1])
+for word, n in most_common:
+    print(word, ':', n, 'times')
